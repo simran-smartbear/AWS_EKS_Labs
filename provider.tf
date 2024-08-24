@@ -19,10 +19,10 @@ terraform {
 
 backend "remote" {
 		hostname = "app.terraform.io"
-		organization = "CloudQuickLabs"
+		organization = "test-simran"
 
 		workspaces {
-			name = "AWSEKS"
+			name = "AWS_EKS_Labs"
 		}
 	}
 }
@@ -44,7 +44,7 @@ provider "kubernetes" {
 
 
 provider "aws" {
-  region = "us-west-2"
+  region = "ap-southeast-1"
 }
 
 resource "random_string" "suffix" {
